@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../common/head') %>
+
+    <body>
+        <%- include('../common/header') %>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="data-showing">
+                            <h3 class="title">
+                                <%=dataList.title %>
+                            </h3>
+                            <img src="<%=dataList.image.url%>" alt="<%=dataList.image.filename%>">
+                            <p>
+                                <%=dataList.description%>
+                            </p>
+                            <p>Price:&#8377; <%=dataList.price.toLocaleString("en-IN")%>
+                            </p>
+                            <p>location: <%=dataList.location%>,
+                                    <%=dataList.country%>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        <%- include('../common/footer') %>
+    </body>
+
+</html>
