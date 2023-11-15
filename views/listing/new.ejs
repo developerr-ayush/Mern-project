@@ -1,31 +1,79 @@
 <% layout('layout/boilerplate') -%>
 
-
-    <div class="container">
+    <div class="container my-3">
         <div class="row">
-            <div class="col-12">
-                <form method="post" action="/listing">
-                    <div>
-                        <input type="text" name="listing[title]" placeholder="title">
+            <div class="col-12 col-md-8 mx-auto">
+                <h3>Add Your listing</h3>
+                <form method="post" action="/listing" class="row needs-validation" novalidate>
+                    <div class="mb-3 col-12 col-lg-12">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text"
+                            class="form-control" name="listing[title]" id="title" placeholder="Title" required
+                            minlength="10">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Title should be atleast 10 letters
+                        </div>
+
                     </div>
-                    <div>
-                        <textarea type="text" name="listing[description]"
-                            placeholder="description"></textarea>
+                    <div class="mb-3 col-12 col-lg-12">
+                        <label for="desc" class="form-label">Description</label>
+                        <textarea type="text"
+                            class="form-control" name="listing[description]" id="desc"
+                            placeholder="Description" required minlength="50"></textarea>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Description should be atleast 50 letters
+                        </div>
                     </div>
-                    <div>
-                        <input type="url" name="listing[image][url]" placeholder="image link/url">
+                    <div class="mb-3 col-12 col-lg-12">
+                        <label for="image" class="form-label">Image</label>
+                        <input type="text" hidden value="New Listing" name="listing[image][filename]">
+                        <input type="text"
+                            class="form-control" name="listing[image][url]" id="image" placeholder="Image url">
                     </div>
-                    <div>
-                        <input type="number" name="listing[price]" placeholder="price">
+                    <div class="mb-3 col-12 col-lg-12">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="text"
+                            class="form-control" name="listing[price]" id="price" placeholder="Price" required
+                            minlength="3">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Price must be atleast 1
+                        </div>
                     </div>
-                    <div>
-                        <input type="text" name="listing[location]" placeholder="location">
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="loc" class="form-label">Location</label>
+                        <input type="text"
+                            class="form-control" name="listing[location]" id="loc" placeholder="Location" required
+                            minlength="3">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Title should be atleast 3 letters
+                        </div>
                     </div>
-                    <div>
-                        <input type="text" name="listing[country]" placeholder="country">
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text"
+                            class="form-control" name="listing[country]" id="country" placeholder="Country" required
+                            minlength="3">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Title should be atleast 10 letters
+                        </div>
                     </div>
-                    <div>
-                        <button>Add new listing</button>
+                    <div class="mb-3 col-12 col-lg-6">
+                        <button class="btn btn-danger">Add new listing</button>
                     </div>
                 </form>
             </div>

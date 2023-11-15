@@ -1,26 +1,30 @@
 <% layout('layout/boilerplate') -%>
 
-
-    <div class="container">
+    <div class="container my-3">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-lg-6 mx-auto">
                 <div class="data-showing">
-                    <h3 class="title">
+                    <h3 class="title fs-5 fw-bold">
                         <%=dataList.title %>
                     </h3>
-                    <img src="<%=dataList.image.url%>" alt="<%=dataList.image.filename%>">
+                    <img src="<%=dataList.image.url%>" alt="<%=dataList.image.filename%>"
+                        class="w-100 rounded image-16by9">
                     <p>
                         <%=dataList.description%>
                     </p>
-                    <p>Price:&#8377; <%=dataList.price.toLocaleString("en-IN")%>
-                    </p>
-                    <p>location: <%=dataList.location%>,
+                    <h6 class="fw-bold">&#8377; <%=dataList.price.toLocaleString("en-IN")%>
+                    </h6>
+                    <p>
+                        <%=dataList.location%>,
                             <%=dataList.country%>
                     </p>
-                    <a href="/listing/<%= dataList.id %>/edit">update</a>
-                    <form method="POST" action="/listing/<%= dataList.id %>?_method=DELETE">
-                        <button>Delete this listing</button>
-                    </form>
+                    <div class="d-flex gap-1">
+
+                        <a href="/listing/<%= dataList.id %>/edit" class=" btn btn-success">Edit</a>
+                        <form method="POST" action="/listing/<%= dataList.id %>?_method=DELETE">
+                            <button class="btn btn-danger">Delete this listing</button>
+                        </form>
+                    </div>
                 </div>
 
             </div>

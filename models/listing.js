@@ -16,15 +16,8 @@ const ListingSchema = new mongoose.Schema({
     require: true,
     default: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1693234928596-7052022c15a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
-    set: (e) =>
-      e == ""
-        ? {
-            filename: "listingimage",
-            url: "https://images.unsplash.com/photo-1693234928596-7052022c15a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          }
-        : e,
   },
   price: {
     type: Number,

@@ -1,10 +1,22 @@
 .card-img-top {
   aspect-ratio: 1/1;
+  border-radius: 0.7rem;
 }
 .card-title {
   font-size: 1rem;
+  margin-top: 0;
   font-weight: bold;
 }
-.card {
+.card-body{
+  padding-top: .5rem;
+}
+
+.card { 
   text-decoration: none;
+}
+.card:hover .card-img-top{
+  opacity: 0.8;
+}
+.image-16by9{
+  aspect-ratio: 16/9;
 }

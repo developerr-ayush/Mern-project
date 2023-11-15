@@ -1,11 +1,15 @@
-<a href="/listing/<%=data.id%>" class="card h-100">
+<a href="/listing/<%=data.id%>" class="card h-100 border-0">
     <img src="<%= data.image.url %>" class="card-img-top" alt="<%=data.image.filename%>" />
     <div class="card-body">
         <h5 class="card-title">
             <%= data.title %>
         </h5>
+        <p class="location mb-0">
+            
+            <%= data.country %>
+        </p>
         <p class="card-text">
-            <%= data.description %>
+            <%= data.price.toLocaleString("en-IN", {style:"currency", currency:"INR"}) %>
         </p>
     </div>
 </a>
