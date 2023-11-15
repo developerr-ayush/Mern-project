@@ -1,0 +1,28 @@
+<% layout('layout/boilerplate') -%>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="data-showing">
+                    <h3 class="title">
+                        <%=dataList.title %>
+                    </h3>
+                    <img src="<%=dataList.image.url%>" alt="<%=dataList.image.filename%>">
+                    <p>
+                        <%=dataList.description%>
+                    </p>
+                    <p>Price:&#8377; <%=dataList.price.toLocaleString("en-IN")%>
+                    </p>
+                    <p>location: <%=dataList.location%>,
+                            <%=dataList.country%>
+                    </p>
+                    <a href="/listing/<%= dataList.id %>/edit">update</a>
+                    <form method="POST" action="/listing/<%= dataList.id %>?_method=DELETE">
+                        <button>Delete this listing</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>

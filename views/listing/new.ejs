@@ -1,0 +1,33 @@
+<% layout('layout/boilerplate') -%>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form method="post" action="/listing">
+                    <div>
+                        <input type="text" name="listing[title]" placeholder="title">
+                    </div>
+                    <div>
+                        <textarea type="text" name="listing[description]"
+                            placeholder="description"></textarea>
+                    </div>
+                    <div>
+                        <input type="url" name="listing[image][url]" placeholder="image link/url">
+                    </div>
+                    <div>
+                        <input type="number" name="listing[price]" placeholder="price">
+                    </div>
+                    <div>
+                        <input type="text" name="listing[location]" placeholder="location">
+                    </div>
+                    <div>
+                        <input type="text" name="listing[country]" placeholder="country">
+                    </div>
+                    <div>
+                        <button>Add new listing</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
