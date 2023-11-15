@@ -1,0 +1,37 @@
+<% layout('layout/boilerplate') -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form method="post" action="/listing/<%=listing.id%>" autocomplete="false">
+                    <div>
+                        <input type="text" name="listing[title]" placeholder="title"
+                            value="<%=listing.title%>">
+                    </div>
+                    <div>
+                        <textarea type="text" name="listing[description]"
+                            placeholder="description"><%=listing.description%></textarea>
+                    </div>
+                    <div>
+                        <input type="url" name="listing[image][url]" placeholder="image link/url"
+                            value="<%=listing.image.url%>">
+                    </div>
+                    <div>
+                        <input type="number" name="listing[price]" placeholder="price"
+                            value="<%=listing.price%>">
+                    </div>
+                    <div>
+                        <input type="text" name="listing[location]" placeholder="location"
+                            value="<%=listing.location%>">
+                    </div>
+                    <div>
+                        <input type="text" name="listing[country]" placeholder="country"
+                            value="<%=listing.country%>">
+                    </div>
+                    <div>
+                        <button>Update listing</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,10 @@
+.card-img-top {
+  aspect-ratio: 1/1;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card {
+  text-decoration: none;
+}

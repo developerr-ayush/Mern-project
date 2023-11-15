@@ -1,0 +1,12 @@
+<% layout('layout/boilerplate') -%>
+
+        <div class="container">
+            <div class="row align-items-stretch g-3 ">
+                <a href="/listing/new">Add listing</a>
+                <% for (arr in allListings){ %>
+                    <div class="col-lg-3 col-md-4 col-sm-6  col-12">
+                        <%- include("./card",{data : allListings[arr]}) %>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
